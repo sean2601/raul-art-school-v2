@@ -1,0 +1,117 @@
+/* Override styles to move navbar buttons to the far right */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Push further right on larger screens */
+@media (min-width: 1200px) {
+    .nav-menu {
+        right: 4rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .nav-menu {
+        right: 6rem;
+    }
+}
+
+/* Ensure nav items stay visible */
+.nav-link {
+    white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: static;
+        transform: none;
+        right: auto;
+    }
+}
+
+/* Terms section styling */
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.term-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffd93d;
+    text-align: left;
+}
+
+.term-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.term-details p {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.term-details strong {
+    color: #ff6b6b;
+}
+
+.term-notes {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ff6b6b;
+}
+
+.term-notes h4 {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.term-notes ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.term-notes li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.term-notes li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    font-weight: bold;
+}

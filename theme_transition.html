@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Transition - Sketch School Malahide</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #2C3E50;
+            overflow: hidden;
+        }
+        .transition-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.3);
+            max-width: 500px;
+            position: relative;
+            z-index: 10;
+        }
+        .paint-brush {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .btn {
+            background: linear-gradient(135deg, #4682B4, #87CEEB);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        .floating-paint {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            opacity: 0.6;
+            z-index: 1;
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-100px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating paint elements -->
+    <div class="floating-paint" style="background: #FF4444; top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="floating-paint" style="background: #FFD700; top: 60%; left: 80%; animation-delay: 2s;"></div>
+    <div class="floating-paint" style="background: #32CD32; top: 40%; left: 30%; animation-delay: 4s;"></div>
+    <div class="floating-paint" style="background: #9370DB; top: 80%; left: 60%; animation-delay: 6s;"></div>
+    
+    <div class="transition-container">
+        <div class="paint-brush">🎨</div>
+        <h1>New Sky & Paint Theme Ready!</h1>
+        <p>Your website has been transformed with a beautiful blue sky and paint theme!</p>
+        <p>Features include:</p>
+        <ul style="text-align: left; margin: 1rem 0;">
+            <li>✨ Animated clouds and sky background</li>
+            <li>🖌️ Paint brush cursor effects</li>
+            <li>🎨 Floating paint elements</li>
+            <li>☁️ Interactive cloud animations</li>
+            <li>🎭 Canvas-like sections</li>
+            <li>🎪 Hover effects and parallax scrolling</li>
+        </ul>
+        <a href="index.html" class="btn">View New Theme</a>
+    </div>
+</body>
+</html>
