@@ -569,6 +569,21 @@ body {
     animation-delay: -4s;
 }
 
+.paint-splatter:nth-child(5) {
+    background: var(--paint-green);
+    animation-delay: -1s;
+}
+
+.paint-splatter:nth-child(6) {
+    background: var(--paint-purple);
+    animation-delay: -3s;
+}
+
+.paint-splatter:nth-child(7) {
+    background: var(--paint-orange);
+    animation-delay: -5s;
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(180deg); }
