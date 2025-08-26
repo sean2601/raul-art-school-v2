@@ -8,6 +8,7 @@
     --paint-red: #FF4444;
     --paint-yellow: #FFD700;
     --paint-green: #32CD32;
+    --paint-blue: #1E90FF;
     --paint-purple: #9370DB;
     --paint-orange: #FF8C00;
     --brush-brown: #8B4513;
@@ -583,6 +584,40 @@ body {
     background: var(--paint-orange);
     animation-delay: -5s;
 }
+
+.paint-splatter:nth-child(8) {
+    background: var(--paint-red);
+    animation-delay: -6s;
+}
+
+.paint-splatter:nth-child(9) {
+    background: var(--paint-yellow);
+    animation-delay: -2.5s;
+}
+
+.paint-splatter:nth-child(10) {
+    background: var(--paint-blue);
+    animation-delay: -4.5s;
+}
+
+.paint-splatter:nth-child(11) {
+    background: var(--paint-green);
+    animation-delay: -1.5s;
+}
+
+/* Floating Art Icons */
+.decor-icon {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.8;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.decor-icon.pencil { color: var(--paint-yellow); }
+.decor-icon.brush { color: var(--paint-purple); }
+.decor-icon.pen { color: var(--paint-green); }
+.decor-icon.palette { color: var(--paint-orange); }
 
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
